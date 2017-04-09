@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">крестики-нолики</string>
+    <string name="promotion">Место для Вашей рекламы</string>
+    <string name="title_you">Вы</string>
+    <string name="title_comp">Противник</string>
+    <string name="play_message">Ваш\nзнак</string>
+    <string name="play_help">нажмите\nна картинку\nдля смены\nВашего\nзнака</string>
+    <string name="play">Игра</string>
+    <string name="radio_group">Против Вас играет:</string>
+    <string name="exit">Выход</string>
+    <string name="new_field">Очистить</string>
+    <string name="players_move">Ваш ход</string>
+    <string name="player_wins">Поздравляю! Вы победили!</string>
+    <string name="comp_wins">Жаль, но Вы проиграли. Победил Противник!</string>
+    <string name="draw_wins">Жаль, закончились свободные клетки. Ничья!</string>
+    <string name="is_full">Здесь занято!</string>
+    <string name="difficulty1">ребёнок</string>
+    <string name="difficulty2">нормальный</string>
+    <string name="difficulty3">непобедимый</string>
+    <string name="change_sign">Победитель играет за крестики</string>
+</resources>

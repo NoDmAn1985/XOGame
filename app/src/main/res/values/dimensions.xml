@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="image_size">100dp</dimen>
+    <dimen name="width_of_big_4">46dp</dimen>
+    <dimen name="length_for_menu">200dp</dimen>
+    <dimen name="length_of_big">150dp</dimen>
+    <dimen name="width_of_big">50dp</dimen>
+    <dimen name="table">300dp</dimen>
+    <dimen name="text_small">15dp</dimen>
+    <dimen name="text_big">20dp</dimen>
+    <dimen name="text_title">40dp</dimen>
+</resources>
