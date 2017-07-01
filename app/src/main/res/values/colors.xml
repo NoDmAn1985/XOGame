@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="play_message">#e8ffe0</color>
+    <color name="exit">#ffffff</color>
+    <color name="play">#ffffff</color>
+    <color name="title_text">#ffffff</color>
+    <color name="title_back">#000000</color>
+    <color name="buttons">#1f04bd</color>
+    <color name="back_of_message">#daf0cb</color>
+    <color name="back_of_exit">#ff7c7c</color>
+    <color name="back_of_play">#6bda48</color>
+    <color name="pressed_exit">#ff0000</color>
+    <color name="pressed_play">#237f07</color>
+</resources>

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    android:background="@drawable/background"
+    tools:context="ru.academits.nodman.xogame.Main">
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_of_big"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/title_back"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textColor="@color/title_text"
+            android:textSize="@dimen/text_title"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/image_size"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/promotion"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/title_back"
+            android:gravity="center"
+            android:text="@string/promotion"
+            android:textAlignment="center"
+            android:textColor="@color/title_text"
+            android:textSize="@dimen/text_small"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableRow
+                android:id="@+id/row1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/length_for_menu"
+                    android:layout_height="@dimen/length_for_menu"
+                    android:background="@color/play_message">
+
+                    <ImageSwitcher
+                        android:id="@+id/imageSwitcher"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onSwitcherClick"
+                        android:soundEffectsEnabled="true">
+
+                        <ImageView
+                            android:id="@+id/imageCellX"
+                            android:layout_width="@dimen/length_for_menu"
+                            android:layout_height="@dimen/length_for_menu"
+                            android:src="@drawable/cell_x"
+                            android:tag="cell_x" />
+
+                        <ImageView
+                            android:id="@+id/imageCellO"
+                            android:layout_width="@dimen/length_for_menu"
+                            android:layout_height="@dimen/length_for_menu"
+                            android:src="@drawable/cell_o"
+                            android:tag="cell_o" />
+                    </ImageSwitcher>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#5000"
+                        android:gravity="center"
+                        android:text="@string/play_help"
+                        android:textColor="#FFFF"
+                        android:textSize="@dimen/text_big"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/back_of_message"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/row1">
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="@dimen/length_for_menu"
+                    android:layout_height="wrap_content"
+                    android:background="@color/back_of_message"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:soundEffectsEnabled="true"
+                        android:text="@string/radio_group"
+                        android:textColor="@color/buttons"
+                        android:textSize="@dimen/text_small"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/difficulty1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/difficulty1"
+                        android:textColor="@color/buttons"
+                        android:textSize="@dimen/text_small" />
+
+                    <RadioButton
+                        android:id="@+id/difficulty2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/difficulty2"
+                        android:textColor="@color/buttons"
+                        android:textSize="@dimen/text_small" />
+
+                    <RadioButton
+                        android:id="@+id/difficulty3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/difficulty3"
+                        android:textColor="@color/buttons"
+                        android:textSize="@dimen/text_small" />
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="@dimen/length_for_menu"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/back_of_message"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/row1">
+
+                <CheckBox
+                    android:id="@+id/toChangeSign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/change_sign"
+                    android:textColor="@color/buttons"
+                    android:textSize="@dimen/text_small"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/row1">
+
+                <TextView
+                    android:id="@+id/buttonPlay"
+                    android:layout_width="@dimen/length_for_menu"
+                    android:layout_height="@dimen/width_of_big"
+                    android:background="@drawable/states_play"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:soundEffectsEnabled="true"
+                    android:text="@string/play"
+                    android:textColor="@color/play"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+
+            <TableRow
+                android:id="@+id/row4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/back_of_exit"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/row3">
+
+                <TextView
+                    android:id="@+id/buttonExit"
+                    android:layout_width="@dimen/length_for_menu"
+                    android:layout_height="@dimen/width_of_big"
+                    android:background="@drawable/states_exit"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:soundEffectsEnabled="true"
+                    android:text="@string/exit"
+                    android:textColor="@color/exit"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </TableRow>
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    tools:context="ru.academits.nodman.xogame.Main">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/buttonExit"
+                android:layout_width="@dimen/length_of_big"
+                android:layout_height="@dimen/width_of_big_4"
+                android:background="@drawable/states_exit"
+                android:textColor="@color/exit"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:soundEffectsEnabled="true"
+                android:text="@string/exit"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/buttonNew"
+                android:layout_width="@dimen/length_of_big"
+                android:layout_height="@dimen/width_of_big_4"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/states_play"
+                android:textColor="@color/play"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:soundEffectsEnabled="true"
+                android:text="@string/new_field"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/width_of_big"
+            android:layout_height="@dimen/image_size"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="@dimen/image_size"
+                android:layout_height="@dimen/image_size"
+                android:background="@color/play_message">
+
+                <ImageView
+                    android:id="@+id/imageOfPlayerCell"
+                    android:layout_width="@dimen/image_size"
+                    android:layout_height="@dimen/image_size"
+                    app:srcCompat="@drawable/cell_x" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#5000"
+                    android:gravity="center"
+                    android:text="@string/play_message"
+                    android:textColor="#FFFF"
+                    android:textSize="@dimen/text_small"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/tableLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:id="@+id/button1x1"
+                    android:layout_width="@dimen/image_size"
+                    android:layout_height="@dimen/image_size"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    app:srcCompat="@drawable/states_cell_pressed" />
+
+                <ImageView
+                    android:id="@+id/button1x2"
+                    android:layout_width="@dimen/image_size"
+                    android:layout_height="@dimen/image_size"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    app:srcCompat="@drawable/states_cell_pressed" />
+
+                <ImageView
+                    android:id="@+id/button1x3"
+                    android:layout_width="@dimen/image_size"
+                    android:layout_height="@dimen/image_size"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    app:srcCompat="@drawable/states_cell_pressed" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4">
+
+                <ImageView
+                    android:id="@+id/button2x1"
+                    android:layout_width="@dimen/image_size"
+                    android:layout_height="@dimen/image_size"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    app:srcCompat="@drawable/states_cell_pressed" />
+
+                <ImageView
+                    android:id="@+id/button2x2"
+                    android:layout_width="@dimen/image_size"
+                    android:layout_height="@dimen/image_size"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    android:tag="cell_zero"
+                    app:srcCompat="@drawable/states_cell_pressed" />
+
+                <ImageView
+                    android:id="@+id/button2x3"
+                    android:layout_width="@dimen/image_size"
+                    android:layout_height="@dimen/image_size"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    app:srcCompat="@drawable/states_cell_pressed" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4">
+
+                <ImageView
+                    android:id="@+id/button3x1"
+                    android:layout_width="@dimen/image_size"
+                    android:layout_height="@dimen/image_size"
+                    android:layout_gravity="left"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    android:src="@drawable/states_cell_pressed"/>
+
+                <ImageView
+                    android:id="@+id/button3x2"
+                    android:layout_width="@dimen/image_size"
+                    android:layout_height="@dimen/image_size"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    app:srcCompat="@drawable/states_cell_pressed" />
+
+                <ImageView
+                    android:id="@+id/button3x3"
+                    android:layout_width="@dimen/image_size"
+                    android:layout_height="@dimen/image_size"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    app:srcCompat="@drawable/states_cell_pressed" />
+            </TableRow>
+        </TableLayout>
+
+        <ImageView
+            android:id="@+id/imageWins"
+            android:layout_width="@dimen/table"
+            android:layout_height="@dimen/table"
+            android:visibility="invisible"
+            android:clickable="true"
+            android:onClick="onClick"
+            app:srcCompat="@drawable/wins_diag_down" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
